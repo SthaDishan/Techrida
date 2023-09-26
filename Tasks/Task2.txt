@@ -1,0 +1,205 @@
+1. Write a python program to find the remainder of a given number if divisor is 2.
+	def find_remainder(number):
+    	   remainder = number % 2
+    	   return remainder
+
+	def main():
+    	   try:
+        	num = float(input("Enter the number:"))
+        	result = find_remainder(num)
+        	print(f"the remainder is:{result}")
+    	   except ValueError:
+        	print("Invalid number")
+
+	if __name__ == "__main__":
+    	   main()
+
+
+2. Demonstrate the use of ord() and chr() functions using a simple python program. [Take Data From User’s]
+
+	def main():
+   	   user_input = input("Enter a character: ")
+	   unicode_code_point = ord(user_input)
+	   converted_character = chr(unicode_code_point)
+	   print(f"Input character: {user_input}")
+    	   print(f"Unicode code point: {unicode_code_point}")
+    	   print(f"Converted character: {converted_character}")
+
+	if __name__ == "__main__":
+    	   main()
+
+
+
+3. Write a python program to calculate BMI of a person when all parameters are provided. BMI= weight(kg)/height(m^2)
+
+	def calculate_bmi(weight,height):
+    	   BMI = weight / (height **2)
+    	   return BMI
+
+	def main():
+    	   try:
+        	weight_kg= float(input("Enter the weight of person (IN KG): "))
+        	height_m= float(input(" Enter the height of person (IN meter square):"))
+        	BMI_result = calculate_bmi(weight_kg, height_m)
+        	print(f"the BMI of the person is: {BMI_result}")
+    	   except ValueError:
+       		print("Invalid value.")
+
+	if __name__ == "__main__":
+     	   main()
+
+
+
+4. Write a python program to display the total surface area of the hemisphere.
+
+	import math
+
+	def calculate_hemisphere(radius):
+    	   hemisphere = 3 * math.pi * (radius * radius)
+    	   return hemisphere
+
+	def main():
+    	   try:
+        	radius = float(input("Enter the radius of hemisphere: "))
+        	surfacearea = calculate_hemisphere(radius)
+        	print(f"the surface area of hemisphere is: {surfacearea}")
+    	   except ValueError:
+        	print("Invalid value.")
+
+	if __name__ == "__main__":
+    	main()
+
+5. Write a program to find the cube root of a number. Prompt the user to input a number and print the cube root of the number.
+	def cube_root(number):
+    	   cuberoot = number * (1/3)
+    	   return cuberoot
+
+	def main():
+    	   try:
+        	number= float(input("Enter the number: "))
+        	result = cube_root(number)
+        	print(f" the cuberoot of the number is: {result}")
+    	   except ValueError:
+        	print("Invaid value.")
+
+	if __name__ == "__main__":
+    	   main()
+
+
+6.Suppose you are a teacher and you want to create a program that takes in grades from three exams and calculates the average grade for a student. You want to print out the average. 
+  Now write a python program for the above situation.
+
+	def calculate_average_grades(exam1, exam2, exam3):
+    	   totalgrade = (exam1 + exam2 + exam3)
+    	   averagegrade = totalgrade / 3
+    	   return averagegrade
+
+	def main():
+    	   try:
+        	exam1 = float(input("Enter the marks of exam 1"))
+        	exam2 = float(input("Enter the marks of exam 2"))
+        	exam3 = float(input("Enter the marks of exam 3"))
+        	result = calculate_average_grades(exam1, exam2, exam3)
+        	print(f"The average grades of the student is: {result}")
+    	   except ValueError:
+        	print("invalid value")
+	if __name__ == "__main__":
+    	   main()
+
+
+7. Suppose there are 20 students in a class and 8 of them are left-handed. What is the probability of randomly selecting a left-handed student from the class?
+	def probability_left_handed(left_handed_students, total_students):
+    	   probability = left_handed_students/total_students
+    	   return probability
+
+	def main():
+    	   total_students = 20
+    	   left_handed_students = 8
+
+    	   result = probability_left_handed(left_handed_students, total_students)
+    	   print(f"the probability of selecting left handed students is: {result}")
+
+	if __name__ == "__main__":
+    	   main()
+
+
+8. A teacher has 50 sheets of paper and wants to distribute them equally among 15 students. How many sheets of paper will each student receive and how many sheets will be left over?
+
+	def distribute_sheet_paper(total_sheets, total_students):
+    	   sheets_per_student = total_sheets / total_students
+    	   left_over_sheets = total_sheets%total_students
+    	   return sheets_per_student, left_over_sheets
+
+	def main():
+    	   total_sheets = 50
+    	   total_students = 15
+    	   sheets_per_student, left_over_sheets = distribute_sheet_paper(total_sheets, total_students)
+    	   print(f"Each student will receive {sheets_per_student} sheets of paper.")
+    	   print(f"There will be {left_over_sheets} sheet(s) left over.")
+    
+	if __name__ == "__main__":
+    	   main()
+
+
+did not understand this line:   sheets_per_student, left_over_sheets = distribute_sheet_paper(total_sheets, total_students)
+
+
+9. A student has a rectangular desk with dimensions of 80 cm by 60 cm. They want to cover the entire desk with a piece of paper. To ensure that the paper covers the desk entirely, the paper must be at least as large as the desk. However, if the paper is much larger than the desk, it may be wasteful. Therefore, we want to find the minimum size of paper
+needed to cover the desk entirely.
+
+	def calculate_minimum_paper_size(length,width):
+    	   area = length * width
+    	   return area
+
+	def main():
+    	   desk_length= 80
+    	   desk_width =60
+    	   minimum_paper_size = calculate_minimum_paper_size(desk_length,desk_width)
+    	   print(f"the minimum paper size required is {minimum_paper_size} ")
+
+	if __name__ == "__main__":
+    	   main()
+
+
+
+10. Write a python program to print this address as it is.
+    Gyaneshwor, Kathmandu,
+    Naxal, PO:44600
+    Kathmandu, Nepal
+
+	def main():
+   	   address = '''
+	Gyaneshwor, Kathmandu,
+	Naxal, PO:44600
+	Kathmandu, Nepal
+	'''
+    	   print(address)
+
+	if __name__ == "__main__":
+   	   main()
+
+
+
+11. You’re waiting at a station and the announcer has just broadcast that your train is going to be 13445 seconds late. You need to work out in understandable terms what that means. You assume this is going to be quite a long time so you whip out your laptop to write a program to convert the seconds into hours, minutes and seconds, aiming to maximize readability by giving priority to the largest units, i.e. the resulting seconds and minutes values must not be greater than 60. You will need four variables to hold: the total number of seconds; the number of hours; the number of minutes; and the number of remaining seconds. The example output should look something like this:
+13442 Seconds is: 3 Hours, 44 Minutes and 5 Seconds.
+
+
+	def convert_seconds_to_readable_time(seconds):
+    	   total_seconds = seconds
+
+    	   hours = total_seconds // 3600
+    	   total_seconds %= 3600 
+    	   minutes = total_seconds // 60
+    	   total_seconds %= 60
+    	   remaining_seconds = total_seconds
+    	   return hours, minutes, remaining_seconds
+
+	def main():
+  	  total_seconds = 13442 
+    	  hours, minutes, remaining_seconds = convert_seconds_to_readable_time(total_seconds)
+    	  print(f"{total_seconds} Seconds is: {hours} Hours, {minutes} Minutes, and {remaining_seconds} Seconds.")
+
+	if __name__ == "__main__":
+    	  main()
+
+(this solution is not clear to me)

@@ -1,0 +1,6 @@
+FROM nginx: alpine
+MAINTAINER DISHAN SHRESTHA <shresthadishan2@gmail.com>
+
+COPY website /website website /website
+COPY nginx.com /etc/nginx/nginx.conf
+   
